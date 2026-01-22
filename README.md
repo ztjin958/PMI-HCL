@@ -1,6 +1,6 @@
 # PHI-HCL: Protein-Metabolite Interaction via HyperCL
 
-PHI-HCL is a comprehensive toolkit and dataset collection for studying protein-metabolite (compound) interactions using hypergraph-based deep learning. It is designed for researchers in bioinformatics, computational biology, and drug discovery.
+PHI-HCL is a comprehensive toolkit and dataset collection for studying protein-metabolite interactions using hypergraph-based deep learning. It is designed for researchers in bioinformatics, computational biology, and drug discovery.
 
 ## Background
 
@@ -8,7 +8,7 @@ Understanding protein-metabolite interactions is crucial for elucidating biologi
 
 ## Features
 
-- Ready-to-use datasets for human, E. coli, yeast, and more
+- Ready-to-use datasets for human, E. coli, yeast
 - Hypergraph neural network (HGNN) model implementation (PyTorch & torch-geometric)
 - Data preprocessing and feature extraction scripts
 - Reproducible training and evaluation pipeline
@@ -17,7 +17,7 @@ Understanding protein-metabolite interactions is crucial for elucidating biologi
 ## Directory Structure
 
 ```
-piazza/           # Protein-related dataset (FASTA, links, features, etc.)
+piazza/           # E. coli dataset
 PMIDB/human/      # Human protein-metabolite interaction data
 stitch_ecoli/     # E. coli dataset
 stitch_yeast/     # Yeast dataset
@@ -32,7 +32,7 @@ requirements.txt  # Python dependencies
 
 - **edges.csv / m_p_links.csv**: Protein-metabolite interaction pairs
 - **m_m_links.tsv / p_p_links.tsv**: Metabolite-metabolite & protein-protein similarity networks
-- **meta.smi**: Compound SMILES strings
+- **meta.smi**: metabolite SMILES strings
 - **meta_ChemGPT-19M.npy / protein_large_model.npy**: Precomputed feature matrices
 - **protein_edge.edgelist / meta_edge.edgelist**: Graph edge lists for network construction
 - **p_p_links_part*.tsv**: Large files split for GitHub upload
