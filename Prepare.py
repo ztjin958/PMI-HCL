@@ -8,7 +8,7 @@ np.random.seed(42)
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 cs = "_400"
-path = r'stitch_ecoli'
+path = r'path of your dataset'
 
 df = pd.read_csv(os.path.join(path,f"m_p_links{cs}.csv"))
 # df = pd.read_csv(os.path.join(path,f"m_p_links.csv"))
@@ -171,5 +171,6 @@ specificity_scores = []
 precision_score_scores = []
 print(f"meta_nums:{len(df_pmi_meta_list)}  protein_nums:{len(df_pmi_protein_list)}")
 print("Prepare is done")
+
 
 
