@@ -4,7 +4,7 @@ PHI-HCL is a comprehensive toolkit and dataset collection for studying protein-m
 
 ## Model Architecture Overview
 ### The proposed framework consists of three main stages: (A) Raw Feature Extraction, (B) Feature Improvement, and (C) Prediction.
-![Model Architecture](./path/to/your/image_be50a6.png)
+![Model Architecture](https://github.com/ztjin958/PMI-HCL/blob/main/Figure%201_01.png)
 #### (A) Raw Feature Extraction
 In the initial stage, raw biological data is transformed into high-dimensional feature representations:
 - Metabolites: SMILES strings are processed using ChemGPT to generate the initial metabolite feature matrix.
@@ -15,7 +15,8 @@ This stage enhances the raw features by integrating relational knowledge and fin
 - Hypergraph Convolution & Contrastive Learning: Dual HyperConv layers extract complex higher-order correlations.Contrastive Learning is employed between different scales to ensure robust and invariant feature learning.
 - Channel-wise Attention Mechanism: Features from different scales undergo Row Average Pooling followed by a Fully Connected Neural Network.The model dynamically re-weights feature channels to highlight the most informative biological signals, resulting in refined features.Finally, 1-D Convolutional Neural Networks (1-D CNN) are used to reduce dimensionality and consolidate the enhanced features .
 #### (C) Prediction
-The final stage performs the interaction inference:Feature Fusion: The raw features ($FM, FP$) and the improved features are integrated to form the final comprehensive representations.Interaction Scoring: The fused features for both metabolites and proteins are fed into a Fully Connected Layer (Multi-layer Perceptron) to predict the probability of interaction.
+The final stage performs the interaction inference:Feature Fusion: 
+- The raw features ($FM, FP$) and the improved features are integrated to form the final comprehensive representations.Interaction Scoring: The fused features for both metabolites and proteins are fed into a Fully Connected Layer (Multi-layer Perceptron) to predict the probability of interaction.
 
 ## Background
 
@@ -87,4 +88,5 @@ If you use this project, please cite:
 https://github.com/ztjin958/PMI-HCL
 
 Contributions, issues, and pull requests are welcome!
+
 
